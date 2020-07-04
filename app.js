@@ -10,7 +10,11 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
-require('./configs/passport');
+// var path = require('path');
+// var favicon = require('serve-favicon');
+// var bodyParser = require('body-parser');
+
+// require('./configs/passport');
 
 const app = express();
 
@@ -25,11 +29,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 
 // session
 
 app.use(session({
-  secret: 'go-green',
+  secret: 'mega-hack',
   resave: true,
   saveUninitialized: true,
   cookie: {
@@ -51,22 +59,42 @@ app.use(passport.session());
 app.use(cors({
   credentials: true,
   origin: process.env.REACT_APP_API_URL,
+  // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  // exposedHeaders: ['x-auth-token'],
 }));
 
 // routes
 
-const authRoutes = require('./routes/auth-routes');
-app.use('/api', authRoutes);
+const globalRoutes = require('./routes/index');
+app.use('/api', globalRoutes);
 
-app.use('/api', require('./routes/user-routes'));
-app.use('/api', require('./routes/recipe-routes'));
-app.use('/api', require('./routes/review-routes'));
+app.use('/api', require('./routes/business-route'));
+app.use('/api', require('./routes/discount-route'));
+// app.use('/api', require('./routes/rating-route'));
+// app.use('/api', require('./routes/review-route'));
+app.use('/api', require('./routes/user-route'));
+// app.use('/api', require('./routes/auth-route'));
 
-app.use((req, res, next) => {
-  // If no routes match, send them the React HTML.
-  res.sendFile(__dirname + "/public/index.html");
-});
+// app.use((req, res, next) => {
+//   // If no routes match, send them the React HTML.
+//   res.sendFile(__dirname + "/public/index.html");
+// });
 
 app.listen(process.env.PORT, () => console.log(`Listening on Port: ${process.env.PORT}`));
 
 module.exports = app;
+
+
+
+
+// var index = require('./routes/index');
+
+// // view engine setup
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'jade');
+
+// // uncomment after placing your favicon in /public
+// //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+
+// app.use('/api/v1/', index);
