@@ -6,13 +6,13 @@ router.get('/', (req, res, next) => {
   res.send('Good to Go!');
 });
 
-router.post('/picture/upload', uploadCloud.single('imageUrl'), (req, res, next) => {
-  if (!req.file) {
-    next(new Error('No file uploaded!'));
-    return;
-  }
-  res.json({ secure_url: req.file.secure_url });
-});
+// router.post('/picture/upload', uploadCloud.single('imageUrl'), (req, res, next) => {
+//   if (!req.file) {
+//     next(new Error('No file uploaded!'));
+//     return;
+//   }
+//   res.json({ secure_url: req.file.secure_url });
+// });
 
 module.exports = router;
 
