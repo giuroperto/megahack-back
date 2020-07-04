@@ -70,9 +70,9 @@ app.use('/api', globalRoutes);
 
 app.use('/api', require('./routes/business-route'));
 app.use('/api', require('./routes/discount-route'));
-app.use('/api', require('./routes/rating-route'));
-app.use('/api', require('./routes/review-route'));
-// app.use('/api', require('./routes/user-route'));
+// app.use('/api', require('./routes/rating-route'));
+// app.use('/api', require('./routes/review-route'));
+app.use('/api', require('./routes/user-route'));
 // app.use('/api', require('./routes/auth-route'));
 
 // app.use((req, res, next) => {
