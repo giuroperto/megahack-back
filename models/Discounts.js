@@ -8,7 +8,8 @@ const discountsSchema = new Schema({
   title: { type: String, required: true },
   description: String,
   picture: String,
-  expiration: { type: Date, required: true },
+  expiration: Date,
+  // expiration: { type: Date, required: true },
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });
