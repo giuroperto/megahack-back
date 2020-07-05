@@ -26,7 +26,7 @@ router.post('/user/:userId/addrating', (req, res, next) => {
   const { business, cleanliness, space, materials, individualPackages, capacity, waiters, procedures, children, ventilation, clients, average } = req.body;
   const { userId } = req.params;
 
-  Rating.create({business, cleanliness, space, materials, individualPackages, capacity, waiters, procedures, children, ventilation, clients, average, user: userId })
+  Rating.create({ business, cleanliness, space, materials, individualPackages, capacity, waiters, procedures, children, ventilation, clients, average, user: userId })
     .then((newRating) => {
       const { _id } = newRating;
 
