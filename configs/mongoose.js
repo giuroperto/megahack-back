@@ -1,7 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const SocialLogin = require('../models/SocialLogin');
+// const SocialLogin = require('../models/SocialLogin');
 // var Schema = mongoose.Schema;
 
 module.exports = function () {
