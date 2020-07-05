@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const discountsSchema = new Schema({
-  owner: { type: Schema.Types.ObjectId, ref: 'Owner' },
+  owner: { type: Schema.Types.ObjectId, ref: 'Business' },
   business: [{ type: Schema.Types.ObjectId, ref: 'Business' }],
   user: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   title: { type: String, required: true },
