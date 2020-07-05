@@ -7,8 +7,8 @@ const User = require('../models/User');
 
 router.get('/discounts', (req, res, next) => {
   Discount.find()
-  .populate('business')
-  .populate('businesses')
+    .populate('owner')
+    .populate('business')
     .populate('user')
     .then((discounts) => res.status(200).json(discounts))
     .catch(err => res.status(500).json({ message: 'Something went wrong... Try again', err }));
@@ -18,8 +18,8 @@ router.get('/discount/:id', (req, res, next) => {
   const { id } = req.params;
 
   Discount.findById(id)
-  .populate('business')
-  .populate('businesses')
+    .populate('owner')
+    .populate('business')
     .populate('user')
     .then((discount) => res.status(200).json(discount))
     .catch(err => res.status(500).json({ message: 'Something went wrong... Try again', err }));
@@ -48,7 +48,7 @@ router.put('/discount/:id', (req, res, next) => {
           Business.findByIdAndUpdate(businessId, { $push: { discounts: id } })
           .then(response => {
             console.log(response);
-            res.status(200).json({ message: 'New discount successfully created', editedDiscount });
+            res.status(200).json({ message: 'New discount successfully created', discount });
           })
           .catch((err) => res.status(500).json({ message: 'Something went wrong with business... Try again', err }));
 
@@ -65,15 +65,15 @@ router.put('/discount/:id', (req, res, next) => {
     .catch((err) => res.status(500).json({ message: 'Something went wrong with adding... Try again', err }));
 });
 
-router.post('/add-discount', (req, res, next) => {
-  const { title, owner } = req.body;
+// router.post('/add-discount', (req, res, next) => {
+//   const { title, owner } = req.body;
 
-  Discount.create({ title, owner })
-    .then((newDiscount) => {
-      res.status(200).json({ message: 'Ok' });
-    })
-    .catch((err) => res.status(500).json({ message: 'Something went wrong with adding... Try again', err }));
-});
+//   Discount.create({ title, owner })
+//     .then((newDiscount) => {
+//       res.status(200).json({ message: 'Ok' });
+//     })
+//     .catch((err) => res.status(500).json({ message: 'Something went wrong with adding... Try again', err }));
+// });
 
 router.post('/add-discount', (req, res, next) => {
 
