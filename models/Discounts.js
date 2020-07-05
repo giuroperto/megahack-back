@@ -7,7 +7,7 @@ const discountsSchema = new Schema({
   user: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   title: { type: String, required: true },
   description: String,
-  picture: String,
+  picture: {type: String, default: },
   expiration: Date,
   // expiration: { type: Date, required: true },
 }, {
