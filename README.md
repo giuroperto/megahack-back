@@ -1,8 +1,7 @@
-![AppVeyor](https://img.shields.io/appveyor/build/giuroperto/megahack-front)
-![GitHub top language](https://img.shields.io/github/languages/top/giuroperto/megahack-front)
-[![GitHub license](https://img.shields.io/github/license/giuroperto/megahack-front)](https://github.com/giuroperto/megahack-front/blob/dev/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/giuroperto/megahack-front)](https://github.com/giuroperto/megahack-front/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/giuroperto/megahack-front)](https://github.com/giuroperto/megahack-front/network)
+![GitHub top language](https://img.shields.io/github/languages/top/giuroperto/megahack-back)
+[![GitHub license](https://img.shields.io/github/license/giuroperto/megahack-back)](https://github.com/giuroperto/megahack-back/blob/dev/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/giuroperto/megahack-back)](https://github.com/giuroperto/megahack-back/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/giuroperto/megahack-back)](https://github.com/giuroperto/megahack-back/network)
 
 # **TYKHE** (PROTOTYPE)
 
