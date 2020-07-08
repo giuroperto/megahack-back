@@ -3,7 +3,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/giuroperto/megahack-back)](https://github.com/giuroperto/megahack-back/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/giuroperto/megahack-back)](https://github.com/giuroperto/megahack-back/network)
 
-# **TYKHE** (PROTOTYPE)
+# **TYKHE** (PROTOTYPE) :zap:
+
+<p  align="center"><img src="/src/assets/screenshot/1.png" height="400px"></p>
+
+|![](/src/assets/screenshot/2.png)|![](/src/assets/screenshot/4.png)|![](/src/assets/screenshot/5.png)|![](/src/assets/screenshot/6.png)|![](/src/assets/screenshot/7.png)|![](/src/assets/screenshot/8.png)|
+|---|---|---|---|---|---|
+
 
 ## Challenge
 
@@ -18,12 +24,11 @@ This is the prototype for the solution we developed for the [MEGA HACK 3.0](http
 ### [:movie_camera: Watch our pitch! :brazil:](https://www.youtube.com/watch?v=ChX__RNtMA0&feature=youtu.be)
 
 
-## The App
+## The App :fork_and_knife:
 
+The application aims at evaluating restaurants, with regard to the security and cleaning measures implemented to help prevent COVID-19 outbreak. The evaluation database is fed by users / clients who, in turn, earn points to be exchanged for discounts at restaurants registered on the platform.
 
-#### Step-by-step
-
-
+In addition, restaurants can provide digital menus and photos of the establishment, in addition to creating new discounts to be enjoyed by their customers.
 
 #### Back-end
 - Node.js
